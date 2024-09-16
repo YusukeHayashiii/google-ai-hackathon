@@ -1,0 +1,15 @@
+version: '3'
+services:
+    python:
+        container_name: ${COMPOSE_PROJECT_NAME} # 起動時のコンテナ名
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        environment:
+            - ROOT=TRUE # コンテナ内にroot権限を持たせる
+        volumes: 
+            - "../:/workspace" # [ホストのpath]：[コンテナのpath]
+        ports: # ホスト：コンテナのポート番号を指定。ホストは他コンテナと番号被らないようにする
+            # Streamlit用
+            - "${PORTS_NUM_ST1}:8501" 
+        tty: true # コンテナを起動し続ける

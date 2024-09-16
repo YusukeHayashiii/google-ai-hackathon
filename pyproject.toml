@@ -1,0 +1,46 @@
+[project]
+name = "workspace"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "user", email = "hayashi.44990@intage.com" }
+]
+dependencies = [
+    "pip>=24.2",
+    "numpy>=1.26.0,<2.0.0",
+    "pandas>=2.2.2",
+    "tqdm>=4.66.5",
+    "streamlit>=1.38.0",
+    "python-dotenv>=1.0.1",
+    "wikipedia>=1.4.0",
+    "neo4j==5.20.0",
+    "st-pages>=1.0.1",
+    "langchain==0.2.0",
+    "google-cloud-aiplatform==1.51.0",
+    "langchain_google_vertexai==1.0.4",
+    "langchain_community==0.2.0",
+    "langchain_experimental<0.3.0",
+    "ipykernel>=6.29.5",
+    "yfiles_jupyter_graphs>=1.8.1",
+    "langchainhub>=0.1.21",
+    "chardet>=5.2.0",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/workspace"]
+
+[tool.pyright]
+include = ["src"]
