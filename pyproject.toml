@@ -24,6 +24,7 @@ dependencies = [
     "yfiles_jupyter_graphs>=1.8.1",
     "langchainhub>=0.1.21",
     "chardet>=5.2.0",
+    "google-auth-oauthlib>=1.2.1",
 ]
 readme = "README.md"
 requires-python = ">= 3.12"

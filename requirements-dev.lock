@@ -74,11 +74,14 @@ google-api-core==2.19.2
     # via google-cloud-storage
 google-auth==2.34.0
     # via google-api-core
+    # via google-auth-oauthlib
     # via google-cloud-aiplatform
     # via google-cloud-bigquery
     # via google-cloud-core
     # via google-cloud-resource-manager
     # via google-cloud-storage
+google-auth-oauthlib==1.2.1
+    # via workspace
 google-cloud-aiplatform==1.51.0
     # via langchain-google-vertexai
     # via workspace
@@ -206,6 +209,8 @@ numpy==1.26.4
     # via shapely
     # via streamlit
     # via workspace
+oauthlib==3.2.2
+    # via requests-oauthlib
 orjson==3.10.7
     # via langsmith
 packaging==24.1
@@ -295,8 +300,11 @@ requests==2.32.3
     # via langchain-community
     # via langchainhub
     # via langsmith
+    # via requests-oauthlib
     # via streamlit
     # via wikipedia
+requests-oauthlib==2.0.0
+    # via google-auth-oauthlib
 rich==13.8.1
     # via streamlit
 rpds-py==0.20.0
